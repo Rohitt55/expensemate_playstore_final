@@ -1,0 +1,56 @@
+name: expensemate_rohit
+description: A complete expense tracking Flutter app using SQLite.
+
+publish_to: 'none'
+
+version: 1.0.1+10
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations: # ✅ Localization support
+    sdk: flutter
+  intl: ^0.20.2
+  provider: ^6.0.5
+  shared_preferences: ^2.2.1
+  sqflite: ^2.3.0
+  path_provider: ^2.1.1
+  csv: ^5.0.2
+  fl_chart: ^0.63.0
+  image_picker: ^1.0.4
+  permission_handler: ^11.0.1
+  pdf: ^3.10.4
+  printing: ^5.11.0
+  open_file: ^3.3.2
+  flutter_screenutil: ^5.9.3
+  flutter_html_to_pdf: ^0.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/app_icon.png"
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/images/welcome_image.png
+    - assets/images/user.png
+    - assets/images/app_icon.png
+
+  fonts:
+    - family: NotoSansBengali
+      fonts:
+        - asset: assets/fonts/Noto_Sans_Bengali/static/NotoSansBengali-Regular.ttf
+        - asset: assets/fonts/Noto_Sans_Bengali/static/NotoSansBengali-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Noto_Sans_Bengali/static/NotoSansBengali-Light.ttf
