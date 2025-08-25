@@ -16,7 +16,7 @@ class PDFHelper {
   }) async {
     Intl.defaultLocale = 'en_US';
 
-    // 🔐 Permission handling
+    // Permission handling
     if (Platform.isAndroid) {
       if (await Permission.manageExternalStorage.isDenied ||
           await Permission.storage.isDenied) {
@@ -25,7 +25,7 @@ class PDFHelper {
       }
     }
 
-    // 📊 Load transactions
+    //  Load transactions
     final allTransactions = await DatabaseHelper.instance.getAllTransactions();
     final filtered = allTransactions.where((tx) {
       final txDate = DateTime.parse(tx['date']);
@@ -95,7 +95,7 @@ class PDFHelper {
     </html>
     """;
 
-    // 📁 Save to Downloads (user accessible)
+    // Save to Downloads (user accessible)
     final Directory downloadsDir = Directory('/storage/emulated/0/Download');
     final String fileName = "transaction_report_${DateTime.now().millisecondsSinceEpoch}";
 
@@ -107,19 +107,19 @@ class PDFHelper {
 
     final exists = await pdfFile.exists();
     if (!exists) {
-      print("❌ PDF not created!");
+      print(" PDF not created!");
       return;
     }
 
-    print("✅ PDF saved at: ${pdfFile.path}");
+    print(" PDF saved at: ${pdfFile.path}");
 
-    // 🔄 Option 1: Share PDF
+    //  Option 1: Share PDF
     await Printing.sharePdf(
       bytes: await pdfFile.readAsBytes(),
       filename: '$fileName.pdf',
     );
 
-    // 🔄 Option 2: Open the file (uncomment to use)
+    //  Option 2: Open the file (uncomment to use)
     // await OpenFile.open(pdfFile.path);
   }
 }

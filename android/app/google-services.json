@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "350721367543",
+    "project_id": "expensemateplaystore",
+    "storage_bucket": "expensemateplaystore.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:350721367543:android:f99fbf66e4400a0a0262f2",
+        "android_client_info": {
+          "package_name": "com.rohitsarkar.expensemate"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBL-sJkElnN6nZ1XELQ_cDaPy8rLmP2yTU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
